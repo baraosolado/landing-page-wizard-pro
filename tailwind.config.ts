@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,6 +62,18 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				// MicroLanding custom colors
+				micro: {
+					purple: '#9b87f5',
+					'dark-purple': '#7E69AB',
+					'darkest-purple': '#1A1F2C',
+					'light-purple': '#E5DEFF',
+					'soft-green': '#F2FCE2',
+					'soft-yellow': '#FEF7CD',
+					'soft-orange': '#FEC6A1',
+					'soft-blue': '#D3E4FD',
+					'soft-gray': '#F1F0FB',
 				}
 			},
 			borderRadius: {
@@ -84,11 +97,26 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'float': {
+					'0%, 100%': { transform: 'translateY(0)' },
+					'50%': { transform: 'translateY(-10px)' },
+				},
+				'pulse-slow': {
+					'0%, 100%': { opacity: '1' },
+					'50%': { opacity: '0.8' },
+				},
+				'slide-up-fade': {
+					'0%': { opacity: '0', transform: 'translateY(10px)' },
+					'100%': { opacity: '1', transform: 'translateY(0)' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'float': 'float 6s ease-in-out infinite',
+				'pulse-slow': 'pulse-slow 3s ease-in-out infinite',
+				'slide-up-fade': 'slide-up-fade 0.4s ease-out',
 			}
 		}
 	},
